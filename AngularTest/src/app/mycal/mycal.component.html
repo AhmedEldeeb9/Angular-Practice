@@ -1,0 +1,19 @@
+<div class="back">
+<button (click)="Addonclick()">Add Cal</button>
+
+<div *ngFor="let cal of calList">
+  <table>
+    <tr>
+      <td colspan="4">
+        <input [value]="calcValue" />
+      </td>
+    </tr>
+
+    <tr *ngFor="let row of MetaData">
+      <td *ngFor="let cell of row">
+        <button (click)="HandleButtonClick(cell)">{{ cell }}</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

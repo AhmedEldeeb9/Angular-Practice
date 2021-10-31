@@ -1,0 +1,22 @@
+<div class="card-container">
+
+  <div class="card" style="height: 200px">
+
+
+    <table>
+
+      <tr >
+        <td colspan="4"><input [value]="value"></td>
+      </tr>
+      <tr *ngFor="let row of MetaData">
+        <td *ngFor="let cell of row">
+          <button (click)="HandleBuyttonClick(cell)">{{cell}}</button>
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+
+
+</div>

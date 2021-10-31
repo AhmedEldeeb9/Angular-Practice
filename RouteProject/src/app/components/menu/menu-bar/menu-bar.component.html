@@ -1,0 +1,23 @@
+<div class="topnav">
+
+
+  <a
+    (click)="HandleBack($event)"
+
+    class="animate__animated animate__backInLeft"
+    *ngIf="this.PreviouseMenus.length > 0">
+
+    <i class="fa fa-backward"></i>
+
+  </a>
+  <a *ngFor="let item of ActiveMenudata" [routerLink]="item.href"
+
+     class="animate__animated {{(this.PreviouseMenus.length > 0 )? 'animate__backInRight' :  'animate__backInLeft'}}"
+
+     [routerLinkActive]="(item.href)?'active':''"
+     (click)="HandleMenuClick(item,$event)"
+  >
+    <i [class]="item.icon" *ngIf="item.icon"></i>
+    {{item.Caption}}
+  </a>
+</div>

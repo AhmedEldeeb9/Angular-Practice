@@ -1,0 +1,18 @@
+<div class="header">
+  <a class="logo">Main Page</a>
+  <div class="header-right">
+    <div class="active">
+      <div>
+        <a (click)="moveToHome(1)" [ngClass]="{ active: isactive == 1 }"
+          >Home</a
+        >
+        <a (click)="moveToHome(2)" [ngClass]="{ active: isactive == 2 }"
+          >Calculator</a
+        >
+        <a (click)="moveToHome(3)" [ngClass]="{ active: isactive == 3 }"
+          >About</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<h1 style="background-color: rgb(194, 197, 21)">
+  Hello Our Visitors Don't Worry The Server works Well !!
+</h1>
+
+<hr />
+<br />
+
+<label><h3>Server Name :</h3></label>
+<input type="text" class="form-control" (input)="updateServerStatus($event)" />
+
+<div class="bttn">
+  <button
+    class="btn btn-primary"
+    [disabled]="allowNewServer"
+    autofocus
+    (click)="onclickStatus()"
+  >
+    Add New Server
+  </button>
+</div>
+
+<p
+  *ngIf="serverCreated; else noserver"
+  [ngStyle]="{ backgroundColor: getColor() }"
+>
+  Server has been Created Well !! with Name {{ ServerName }}
+</p>
+<ng-template #noserver
+  ><p [ngStyle]="{ backgroundColor: getColor() }">
+    No Server Ceated Yet.
+  </p></ng-template
+>
